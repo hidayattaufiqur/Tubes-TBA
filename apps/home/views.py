@@ -3,7 +3,6 @@
 Copyright (c) 2019 - present AppSeed.us
 """
 
-import pandas as pd
 from contextlib import redirect_stderr
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
@@ -26,8 +25,8 @@ def index(request):
             # Process to Read and Parser
             rex = {
                 'sentence': form.cleaned_data['words'],
-                'parse_table_file': '/mnt/x/School/College/4th Semester/Teori Bahasa dan Automata/Tubes/apps/templates/home/parser.csv',
-                'lexical_transition_file': '/mnt/x/School/College/4th Semester/Teori Bahasa dan Automata/Tubes/apps/templates/home/lexical.csv',
+                'parse_table_file': '../apps/templates/home/parser.csv',
+                'lexical_transition_file': '../apps/templates/home/lexical-rev1.csv',
                 'debug': True
             }
 
