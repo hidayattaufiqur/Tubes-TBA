@@ -25,8 +25,8 @@ def index(request):
             # Process to Read and Parser
             rex = {
                 'sentence': form.cleaned_data['words'],
-                'parse_table_file': '../apps/templates/home/parser.csv',
-                'lexical_transition_file': '../apps/templates/home/lexical-rev1.csv',
+                'parse_table_file': './apps/templates/home/parser.csv',
+                'lexical_transition_file': './apps/templates/home/lexical.csv',
                 'debug': True
             }
 
