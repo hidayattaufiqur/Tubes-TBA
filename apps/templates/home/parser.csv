@@ -1,0 +1,5 @@
+#;father;mother;son;eat;meet;kick;salad;him;ball;bottle;EOS
+S;SB VB OB;SB VB OB;SB VB OB;error;error;error;error;error;error;error;error
+SB;father;mother;son;error;error;error;error;error;error;error;error
+VB;error;error;error;eat;meet;kick;error;error;error;error;error
+OB;error;error;error;error;error;error;salad;him;ball;bottle;error
