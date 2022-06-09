@@ -1,5 +1,5 @@
 # Tugas Besar Teori Bahasa dan Automata 
-## Kelompok 17:
+## Kelompok 13:
 - Hidayat Taufiqur Rahmah Achmad / 1301204300
 - Mayer Reflino Sitorus / 1301204103
 - Christopher Arden Anugerah / 1301202392
