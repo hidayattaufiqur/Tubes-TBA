@@ -22,16 +22,16 @@ def index(request):
         if form.is_valid():
             form.save()
             
-            # Process to Read and Parser
+            # Process to Read and Parse
             rex = {
-                'sentence': form.cleaned_data['words'],
-                'parse_table_file': './apps/templates/home/parser.csv',
-                'lexical_transition_file': './apps/templates/home/lexical.csv',
+                'kalimat': form.cleaned_data['words'],
+                'parse_table': './apps/templates/home/parser.csv',
+                'transisi_lexical': './apps/templates/home/lexical.csv',
                 'debug': True
             }
 
             Check_L =  None
-            L= LexicalAnalyzer(rex)
+            L = LexicalAnalyzer(rex)
             Temp_L, Check_L = L.reading(Check_L)
             print(Check_L)
 
