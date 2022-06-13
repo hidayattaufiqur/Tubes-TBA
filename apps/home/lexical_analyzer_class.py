@@ -1,8 +1,10 @@
 import string
 import csv
 
+
 class LexicalAnalyzer:
     def __init__(self, config):
+        '''initialize'''
         self.kalimat = config['kalimat']
         self.debug = config['debug']
         self.transisi_lexical = config['transisi_lexical']

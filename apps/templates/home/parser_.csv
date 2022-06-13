@@ -1,0 +1,5 @@
+#,iya',idi',ambo',indo',manre,polo,elli,bale,juku,beppa,EOS
+S,subjek predikat objek,subjek predikat objek,subjek predikat objek,subjek predikat objek,error,error,error,error,error,error,error
+subjek,iya',idi',ambo',indo',error,error,error,error,error,error,error
+predikat,error,error,error,error,manre,polo,elli,error,error,error,error
+objek,error,error,error,error,error,error,error,bale,juku,beppa,error

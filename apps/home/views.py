@@ -9,7 +9,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from .LexicalAnalyzerClass import LexicalAnalyzer
+from .lexical_analyzer_class import LexicalAnalyzer
+from .parser_class import Parser
  
 from .models import TBA
 from .forms import FormTBA
@@ -23,15 +24,16 @@ def index(request):
             form.save()
             
             # Process to Read and Parse
-            rex = {
+            config = {
                 'kalimat': form.cleaned_data['words'],
-                'parse_table': './apps/templates/home/parser.csv',
+                'parse_table': './apps/templates/home/parser_.csv',
                 'transisi_lexical': './apps/templates/home/lexical.csv',
                 'debug': True
             }
 
+            '''lexical analyzer'''
             Check_L =  None
-            L = LexicalAnalyzer(rex)
+            L = LexicalAnalyzer(config)
             Temp_L, Check_L = L.reading(Check_L)
             print(Check_L)
 
@@ -40,7 +42,19 @@ def index(request):
             elif not Check_L:
                 messages.info(request, Temp_L)
 
+            '''parser'''
+            Check_P =  None
+            P = Parser(config)
+            Temp_P, Check_P = P.reading(Check_P)
+            print(Check_P)
+
+            if Check_P:
+                messages.success(request, Temp_P)
+            elif not Check_P:
+                messages.info(request, Temp_P)
+
             return redirect('home')
+
         else:
             messages.error(request, 'Something Wrong! HAD NO IDEA')
             return redirect("home")
